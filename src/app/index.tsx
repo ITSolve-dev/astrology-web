@@ -1,3 +1,1 @@
-export default function App() {
-    return <div>astrology-web</div>
-  }
+export { default } from './App'

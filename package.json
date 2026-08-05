@@ -6,25 +6,44 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "biome check --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "typecheck": "tsc --noEmit",
+    "lint:arch": "steiger ./src",
+    "lint:naming": "eslint --config .eslintrc-naming.cjs src/",
+    "test": "vitest"
   },
   "dependencies": {
+    "@reatom/core": "^1001.3.0",
+    "@reatom/react": "^1001.0.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.18.1",
+    "sonner": "^2.0.7",
+    "zod": "^3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
     "@eslint/js": "^10.0.1",
+    "@feature-sliced/steiger-plugin": "^0.7.0",
     "@types/node": "^24.12.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/coverage-istanbul": "^4.1.10",
     "eslint": "^10.3.0",
+    "eslint-plugin-check-file": "^3.3.2",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "msw": "^2.15.0",
+    "playwright": "^1.61.1",
+    "steiger": "^0.6.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vitest": "^4.1.10"
   }
 }
